@@ -1,0 +1,63 @@
+Angular Assignment: Building a Task Management App
+
+Objective: In this assignment, you will create a simple Task Management app using Angular that demonstrates your understanding of components, modules, directives, pipes, and parent-child relationships in Angular.
+
+Requirements:
+
+Your Task Management app should have the following features:
+
+Components:
+
+Create a component for the main app layout.
+
+Create a component to display a list of tasks.
+
+Create a component for adding new tasks.
+
+Modules:
+
+Organize your app into separate modules for better organization.
+
+Create a feature module for the task-related components.
+
+Directives:
+
+Implement a directive that highlights tasks based on their priority (low, medium, high).
+
+Use another directive to disable the "Mark as Done" button for completed tasks.
+
+Pipes:
+
+Create a custom pipe to filter tasks by their status (done/undone).
+
+Implement the built-in DatePipe to display task creation dates.
+
+Data Binding:
+
+Use property binding to display the task details.
+
+Implement event binding for the "Mark as Done" button.
+
+Parent-Child Relationship:
+
+Create a parent component that manages the task list and the "Add Task" component.
+
+Establish communication between the parent and child components to add and update tasks.
+
+Instructions:
+
+Set up a new Angular project using the Angular CLI.
+
+Create the necessary components: app-layout, task-list, and add-task.
+
+Organize your components into separate modules: AppModule and a feature module for tasks.
+
+Implement the required directives for highlighting and disabling tasks.
+
+Create the necessary pipes for filtering tasks and displaying dates.
+
+Implement data binding to display task information and handle events.
+
+Create a parent component that manages the task list and the add task functionality.
+
+Implement the necessary logic to add tasks and mark them as done.
