@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { BehaviorSubject } from 'rxjs';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-add-task',
@@ -9,9 +11,15 @@ import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AddTaskComponent {
   closeResult: string = '';
-  task: any = { createdAt: new Date().toJSON().slice(0, 10) };
+  defaultValue = { createdAt: new Date(), status: false };
+  task: any = this.defaultValue;
 
-  constructor(private modalService: NgbModal) {}
+
+  newTask$: BehaviorSubject<any> = new BehaviorSubject<any>({});
+
+  constructor(private modalService: NgbModal, private _sharedService: SharedService) {
+    this.newTask$ = this._sharedService.getNewTaskSubject();
+  }
 
   openModal(content: any) {
     this.modalService
@@ -37,7 +45,9 @@ export class AddTaskComponent {
   }
 
   addTask = () => {
-    console.log(this.task);
+    console.log("New added", this.task);
+    this.newTask$.next(this.task);
+    this.task = this.defaultValue;
     this.modalService.dismissAll();
   };
 }
