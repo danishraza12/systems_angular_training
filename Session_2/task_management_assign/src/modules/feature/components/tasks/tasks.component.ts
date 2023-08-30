@@ -23,6 +23,7 @@ export class TasksComponent {
     },
   ];
 
+  isDisabled = false;
   newTask$: BehaviorSubject<any> = new BehaviorSubject<any>({});
 
   constructor(private _sharedService: SharedService) {

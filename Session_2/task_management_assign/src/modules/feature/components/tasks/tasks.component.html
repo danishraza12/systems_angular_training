@@ -12,10 +12,10 @@
       <th>Created At</th>
       <th>Status</th>
     </tr>
-    <tr *ngFor="let task of tasks | dateFilter">
+    <tr *ngFor="let task of tasks | dateFilter" appDisableTask>
       <td>{{ task.description }}</td>
       <td>{{ task.createdAt }}</td>
-      <td><input [(ngModel)]="task.isDone" type="checkbox"/></td>
+      <td><input [disabled]="isDisabled" [(ngModel)]="task.isDone" type="checkbox"/></td>
     </tr>
   </table>
 </div>
