@@ -1,0 +1,3 @@
+Final Assignment 
+
+Please import this Postman collection into your Postman application and endeavor to implement all API endpoints within your own application. Create distinct modules based on the API collection, such as Product, User, and Auth. Apply the comprehensive knowledge you've gained from your Angular training to accomplish this task effectively.
