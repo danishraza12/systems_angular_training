@@ -5,12 +5,12 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
-  apiUrl = 'https://api.escuelajs.co/api/v1/auth/login';
+export class ProfileService {
+  private _apiUrl = 'https://api.escuelajs.co/api/v1/auth/profile';
 
   constructor(private _http: HttpClient) {}
 
-  login(authInfo: any): Observable<any[]> {
-    return this._http.post<any>(`${this.apiUrl}`, authInfo);
+  getProfile(): Observable<any[]> {
+    return this._http.get<any>(`${this._apiUrl}`);
   }
 }
