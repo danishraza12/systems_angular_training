@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 
 interface IAuth {
@@ -20,7 +20,7 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    localStorage.clear();
+    // localStorage.clear();
   }
 
   login = () => {

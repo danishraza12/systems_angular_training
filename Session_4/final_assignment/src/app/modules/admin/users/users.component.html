@@ -1,15 +1,8 @@
 <header>
-  <h1>User Listing</h1>
+  <h4>User Listing</h4>
 </header>
-<div class="user-list" *ngFor="let user of users">
-  <!-- <div class="user">
-    <img [src]="user.images?.[0]" alt="user" />
-    <h2>{{ user.title }}</h2>
-    <p class="price">${{ user.price }}</p>
-    <p>{{ user.description }}</p>
-  </div> -->
-
-  <div class="profile-card">
+<div class="user-list">
+  <div class="profile-card" *ngFor="let user of users">
     <div class="profile-image">
       <img [src]="user.avatar" alt="User Profile Picture" />
     </div>

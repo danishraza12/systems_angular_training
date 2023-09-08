@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from 'src/services/category.service';
+import { Router } from '@angular/router';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-category',
@@ -18,13 +19,14 @@ export class CategoryComponent implements OnInit {
     });
   }
 
-  constructor(private _categoryService: CategoryService) {}
+  constructor(private _categoryService: CategoryService, private _router: Router) {}
 
-  getOne(id: number) {
+  getCategoryProducts(id: number) {
     this._categoryService.getOne(id).subscribe((data) => {
       console.log('fetched category', data);
       this.category = data;
     });
+    this._router.navigate(['product']);
   }
 
   create(data: any) {

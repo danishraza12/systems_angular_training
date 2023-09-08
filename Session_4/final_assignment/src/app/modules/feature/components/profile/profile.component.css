@@ -38,3 +38,39 @@
 .profile-info strong {
   font-weight: bold;
 }
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin: 0;
+}

@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { FeatureModule } from 'src/modules/feature/feature.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { AuthModule } from 'src/modules/auth/auth.module';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { JwtInterceptor } from './intercepters/jwt.interceptor';
 import { AppRoutingModule } from './app.routing.module';
-import { RouterModule } from '@angular/router';
-import { JwtInterceptor } from 'src/intercepters/jwt.interceptor';
-import { AdminModule } from 'src/modules/admin/admin.module';
+import { AuthModule } from './modules/auth/auth.module';
+import { AdminModule } from './modules/admin/admin.module';
+import { FeatureModule } from './modules/feature/feature.module';
 
 @NgModule({
   declarations: [AppComponent],

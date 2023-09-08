@@ -1,0 +1,28 @@
+<header>
+  <nav>
+      <ul>
+          <li><a routerLink="/admin">Admin</a></li>
+          <li><a routerLink="/admin/users">Users</a></li>
+          <li><a routerLink="/product">Products</a></li>
+          <li><a routerLink="/category">Categories</a></li>
+      </ul>
+  </nav>
+</header>
+<div class="profile-container">
+  <div class="profile-card" *ngIf="profile">
+    <div class="profile-image">
+      <img [src]="profile.avatar" alt="User Profile Picture" />
+    </div>
+    <div class="profile-name">
+      {{ profile.name }}
+    </div>
+    <div class="profile-info">
+      <p><strong>Email:</strong> {{ profile.email }}</p>
+      <p><strong>Role:</strong> {{ profile.role }}</p>
+      <p>
+        <strong>Employment Date:</strong>
+        {{ profile.creationAt.toString().split("T")[0] }}
+      </p>
+    </div>
+  </div>
+</div>
