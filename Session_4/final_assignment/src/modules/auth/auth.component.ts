@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/services/auth.service';
 import { Router } from '@angular/router';
 
@@ -12,11 +12,15 @@ interface IAuth {
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.css'],
 })
-export class AuthComponent {
+export class AuthComponent implements OnInit {
   authInfo: IAuth;
 
   constructor(private _authService: AuthService, private _router: Router) {
     this.authInfo = {};
+  }
+
+  ngOnInit(): void {
+    localStorage.clear();
   }
 
   login = () => {

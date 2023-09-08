@@ -1,8 +1,12 @@
-<div class="product" *ngFor="let product of products">
-  <img [src]="product.images?.[0]" alt="Product" />
-  <div class="product-title">{{ product.title }}</div>
-  <div class="product-price">${{ product.price }}</div>
-  <div class="product-description">
-    {{ product.description }}
+<header>
+  <h1>Product Listing</h1>
+</header>
+<div class="product-list" *ngFor="let product of products">
+  <div class="product">
+      <img [src]="product.images?.[0]" alt="Product" />
+      <h2>{{ product.title }}</h2>
+      <p class="price">${{ product.price }}</p>
+      <p>{{ product.description }}</p>
+      <button>Add to Cart</button>
   </div>
 </div>

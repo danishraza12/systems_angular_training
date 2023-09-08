@@ -7,9 +7,10 @@ import { FeatureModule } from 'src/modules/feature/feature.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AuthModule } from 'src/modules/auth/auth.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routing.module';
 import { RouterModule } from '@angular/router';
 import { JwtInterceptor } from 'src/intercepters/jwt.interceptor';
+import { AdminModule } from 'src/modules/admin/admin.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,6 +23,7 @@ import { JwtInterceptor } from 'src/intercepters/jwt.interceptor';
     AuthModule,
     FeatureModule,
     AppRoutingModule,
+    AdminModule,
   ],
   providers: [
     {

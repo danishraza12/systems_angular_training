@@ -8,6 +8,9 @@
   <div class="profile-info">
     <p><strong>Email:</strong> {{ profile.email }}</p>
     <p><strong>Role:</strong> {{ profile.role }}</p>
-    <p><strong>Employment Date:</strong> {{ profile.creationAt.toString().split('T')[0] }}</p>
+    <p>
+      <strong>Employment Date:</strong>
+      {{ profile.creationAt.toString().split("T")[0] }}
+    </p>
   </div>
 </div>

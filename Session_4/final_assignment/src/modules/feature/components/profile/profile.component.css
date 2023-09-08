@@ -1,26 +1,40 @@
-/* Add some CSS for styling */
 .profile-card {
-  width: 300px;
+  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
+  width: 300px;
+  margin: 0 auto;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image {
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0 auto 10px;
+}
+
+.profile-image img {
+  max-width: 100%;
+  height: auto;
 }
 
 .profile-name {
   font-size: 20px;
-  margin-top: 10px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .profile-info {
-  margin-top: 10px;
+  text-align: center;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+.profile-info strong {
+  font-weight: bold;
 }

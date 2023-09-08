@@ -8,6 +8,8 @@ import { CategoryService } from 'src/services/category.service';
 })
 export class CategoryComponent implements OnInit {
   categories: any;
+  category: any;
+  newCategory: any;
 
   ngOnInit(): void {
     this._categoryService.getAllCategories().subscribe((data) => {
@@ -21,11 +23,13 @@ export class CategoryComponent implements OnInit {
   getOne(id: number) {
     this._categoryService.getOne(id).subscribe((data) => {
       console.log('fetched category', data);
+      this.category = data;
     });
   }
 
   create(data: any) {
     this._categoryService.create(data).subscribe((data) => {
+      this.newCategory = data;
       console.log('created category', data);
     });
   }

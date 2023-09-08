@@ -1,7 +1,10 @@
-<div class="category" *ngFor="let category of categories">
-  <img [src]="category.image" alt="Category" />
-  <div class="category-title">{{ category.name }}</div>
-  <div class="category-description">
-    {{ category.creationAt }}
+<header>
+  <h1>Categories</h1>
+</header>
+<div class="category-list" *ngFor="let category of categories">
+  <div class="category">
+    <img [src]="category.image" alt="Category" />
+    <h2>{{ category.name }}</h2>
+    <p>{{ category.creationAt }}</p>
   </div>
 </div>
