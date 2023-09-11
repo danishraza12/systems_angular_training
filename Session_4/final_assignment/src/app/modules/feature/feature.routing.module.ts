@@ -4,11 +4,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProductComponent } from './components/product/product.component';
 import { CategoryComponent } from './components/category/category.component';
+import { AuthGuard } from 'src/app/guards/auth.guard';
 
 const routes: Routes = [
-  { path: 'profile', component: ProfileComponent },
-  { path: 'product', component: ProductComponent },
-  { path: 'category', component: CategoryComponent },
+  { path: 'profile', canActivate: [AuthGuard], component: ProfileComponent },
+  { path: 'product', canActivate: [AuthGuard], component: ProductComponent },
+  { path: 'category', canActivate: [AuthGuard], component: CategoryComponent },
 ];
 
 @NgModule({

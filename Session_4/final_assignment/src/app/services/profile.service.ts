@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfileService {
-  private _apiUrl = 'https://api.escuelajs.co/api/v1/auth/profile';
+  private _apiUrl = environment.apiBaseUrl + 'auth/profile';
 
   constructor(private _http: HttpClient) {}
 
